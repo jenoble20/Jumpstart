@@ -4,15 +4,14 @@ body{
   font-size: 14px;
 }
 
-.active{
-  color: #399bd1;
+@media only screen and (max-width: 620px){
+  body{
+    font-size: 12px;
+  }
 }
 
-#button-wrapper{
-  position: relative;
-  width: 100%;
-  bottom: 270px;
-  text-align: center;
+.active{
+  color: #399bd1;
 }
 
 .btn-primary{
@@ -34,14 +33,32 @@ body{
 
 
 /** HEADER/NAV SECTION **/
-nav ul{
+
+.navbar{
+  background-color: white;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.navbar ul{
   display: flex;
+  margin-top: 1rem;
 }
 
 nav a{
   font-size: 1.1rem;
   font-weight: bold;
   color: #000;
+}
+
+@media only screen and (max-width: 620px){
+  #logo{
+    display: none;
+  }
+
+  .navbar ul{
+    flex-direction: column;
+  }
 }
 
 
@@ -70,7 +87,7 @@ nav a{
 }
 
 .jumbotron p{
-  width: 51.3rem;
+  width: 60%;
   font-size: 1.6rem;
   margin: auto;
 }
@@ -81,6 +98,19 @@ nav a{
                  -1px -1px 0 #000,
                  -1px 1px 0 #000,
                  1px 1px 0 #000;
+}
+
+#button-wrapper{
+  position: relative;
+  width: 100%;
+  bottom: 250px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 450px){
+  #button-wrapper{
+    bottom: 200px;
+  }
 }
 
 .jumbotron-bike{
@@ -100,9 +130,22 @@ nav a{
   .jumbotron h1{
     font-size: 5.7rem;
   }
+}
+
+@media only screen and (max-width: 620px){
+  .jumbotron h1{
+    font-size: 4rem;
+  }
 
   .jumbotron p{
-    width: 41rem;
+    width: 100%;
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 450px){
+  .jumbotron h1{
+    font-size: 3rem;
   }
 }
 
@@ -148,7 +191,7 @@ nav a{
 
 @media only screen and (max-width: 990px){
   #list ul{
-    width: 85%;
+    width: 100%;
     column-count: 2;
     text-align: left;
   }
@@ -156,6 +199,13 @@ nav a{
   #list h3,
   #list ul{
     margin-left: 3rem;
+  }
+}
+
+@media only screen and (max-width: 575px){
+  #list h3,
+  #list ul{
+    margin-left: 0;
   }
 }
 
@@ -175,7 +225,6 @@ nav a{
 }
 
 #content{
-  width: 47rem;
   text-align: center;
 }
 
@@ -186,5 +235,6 @@ nav a{
 }
 
 #content .btn-primary{
+  margin-top: 1rem;
   margin-bottom: 5.2rem;
 }
