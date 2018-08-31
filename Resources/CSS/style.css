@@ -4,6 +4,12 @@ body{
   font-size: 14px;
 }
 
+@media only screen and (min-width: 1500px){
+  body{
+    font-size: 16px;
+  }
+}
+
 @media only screen and (max-width: 620px){
   body{
     font-size: 12px;
@@ -160,6 +166,14 @@ nav a{
 
 #main ul{
   color: rgba(0,0,0,0.7);
+}
+
+#main li{
+  transition: all 0.5s;
+}
+
+#main li:hover{
+  color: rgba(0,0,0,1);
 }
 
 #main img{

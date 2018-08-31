@@ -1,24 +1,26 @@
 $(document).ready(function(){
   $(".carousel").slick({
     accessibility: false,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 4000,
     arrows: false,
-    draggable: true,
+    draggable: false,
     pauseOnFocus: false,
     pauseOnHover: false
   });
 
   $(window).scroll(function(){
     var scrollDist = $(this).scrollTop();
+    var navHeight = $(".navbar").height();
     //console.log(scrollDist);
-    if(scrollDist > 200){
-      var max = -74;
-      var navHeight = $(".navbar").height();
-      var navbar = $(".navbar");
+    if(scrollDist > 300){
+      $(".navbar").stop();
+      $(".navbar").animate({top: -navHeight},150);
     }
-    if(scrollDist === 0){
-      $(navbar).animate({top: navHeight},150);
+    console.log(scrollDist);
+    if(scrollDist < 100){
+      $(".navbar").stop();
+      $(".navbar").animate({top: 0}, 150);
     }
   });
 
